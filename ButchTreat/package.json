@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "name":  "asp.net",
+    "private": true;
+    "dependencies": {
+        {
+            "bootstrap": "^4.1.1",
+            "jquery": "^3.3.1",
+            "jquery-valdiation" "^1:17:0",
+            "jquery-valdiation-unobtrusive": "4.7",
+                "font-awesome": "^4.7"
+        },
+        "devdependencies": " {}"
+    }

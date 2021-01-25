@@ -1,0 +1,40 @@
+﻿@model ContactViewModel1//For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+}
+<div class="col-md-6 offset-1-md-3">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="Name"> your name: </label>
+            <br />
+            <input asp-for="Name" class="form-group"/>
+            <span asp-validation-for="Name"> </span>
+        </div>
+        <br />
+        <label asp-for=" Email">Email: </label>
+        <input asp-for="Email" name="email" />
+        <span asp-validation-for="Name"></span>
+        <br />
+        <label asp-for="Subject"> Subject: </label>
+        <br />
+        <input asp-for="Subject" name="subject" />
+        <span asp-validation-for="Subject"></span>
+        <br />
+        <label asp-for="Message"> Messzage: </label>
+        <br />
+        <textarea rows="4" asp-for="Message"> </textarea>
+        <span asp-validation-for="Message"></span>
+        <br />
+
+        <input type="submit" class="btn btn-primary btn lg" /><i class="fa fa-envelope"></i> sendmessage<input/>
+
+        <div class="text-success">@ViewBag.UserMessage</div>
+    </form>
+</div>
